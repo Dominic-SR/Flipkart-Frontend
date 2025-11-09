@@ -1,24 +1,47 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import {RxCross2} from 'react-icons/rx'
 import './LoginModal.css'
-// import supabase from '../../Superbase/'
+import axios from 'axios'
+ import { ToastContainer, toast } from 'react-toastify';
 
 const LoginModal = ({isOpen, setIsOpen}) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [loginType, setLoginType] = useState(true)
-
+  const API_URL = import.meta.env.VITE_API_BASE_URL;
   // const dispatch = useDispatch()
-
+const successNotify = (msg) => toast.success(msg,{position: "bottom-right",});
+const errorNotify = (msg) => toast.error(msg,{position: "bottom-right",});
   const signup = async() =>{
-    // const {data, error} = await supabase.auth.signUp({
-    //   email,
-    //   password
-    // });
-    console.log(data,error);
-    if(data.user){
-      // alert("Account created, please verify your email.")
+
+    
+
+    let payload = {user_email:email,user_password:password} 
+   try{
+        const response = await axios.post(API_URL+'user/register',payload);
+        
+          if (response.status === 201 || response.status === 200) {
+            
+            successNotify(response.data.message || 'Registration successful!');
+            setTimeout(()=>{
+                setIsOpen(false)
+                setEmail("");
+                setPassword("");
+                setLoginType(true);
+            },6000)
+          } else {
+            errorNotify('An unexpected status was returned.'); 
+          }
+          }
+          catch(err){
+            if (err.response) {
+            errorNotify(err.response.data.message || 'Registration failed.');
+            
+          } else {
+            errorNotify('Network error or server unavailable.');
+          }
     }
+   
   }
 
   const login = async() =>{
@@ -34,6 +57,7 @@ const LoginModal = ({isOpen, setIsOpen}) => {
 
   return (
     isOpen ? (<div className="overlay">
+       <ToastContainer />
       <div className="loginModel">
       
       <div className="left">
