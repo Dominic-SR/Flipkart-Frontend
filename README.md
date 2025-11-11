@@ -1,8 +1,5 @@
 <h1 align="center" >🛒 Flipkart Frontend Clone</h1>
 
-<div align="center" dir="auto">
-  <p>It's a Responsive 📱 Mobile E commerce website with add to card</p>
-</div>
 
 <div align="center" dir="auto">
   <p>🖥️ Desktop View</p>
