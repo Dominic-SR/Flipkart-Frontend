@@ -1,15 +1,6 @@
 <h1 align="center" >🛒 Flipkart Frontend Clone</h1>
 
 
-<div align="center" dir="auto">
-  <p>🖥️ Desktop View</p>
-
-</div>
-
-<div align="center" dir="auto">
-  <p>📱 Mobile View</p>
-</div>
-
 <h2> 💻 Technologies used </h2>
 
 
