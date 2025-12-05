@@ -18,6 +18,11 @@ const Home = () => {
          ))}
         </div>
       </div>
+      <div className="home-container">
+        <div className="home-carousal">
+          
+        </div>
+      </div>
     </div>
   )
 }
