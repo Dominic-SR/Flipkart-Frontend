@@ -1,4 +1,5 @@
 import React from 'react'
+import "./BannerCarousal.css"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,10 +16,12 @@ const BannerCarousal = ({data}) => {
     }
   return (
     <div className='banner-carousal'>
+      {console.log("XXXX",data)
+      }
       <Slider {...settings}>
         {data.map((item)=>(
           <div key={item.id}>
-            <img src={item.ImageSrc} className='bannercarousal-image' />
+            <img src={item.Imgsrc} alt="img" className='bannercarousal-image' />
           </div>
         ))}
       </Slider>
