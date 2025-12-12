@@ -3,6 +3,7 @@ import './Home.css';
 import {CategoryBarData, CarouselData, BestOf } from "../../Datas";
 import CategoryBar from '../../Components/CategoryBar/CategoryBar';
 import Cart from "../Cart/Cart"
+import BannerCarousal from '../../Components/BannerCarousal/BannerCarousal';
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
       </div>
       <div className="home-container">
         <div className="home-carousal">
-          
+          <BannerCarousal data={CarouselData} />
         </div>
       </div>
     </div>
