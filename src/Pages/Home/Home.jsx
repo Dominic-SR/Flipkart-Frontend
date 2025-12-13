@@ -3,7 +3,8 @@ import './Home.css';
 import {CategoryBarData, CarouselData, BestOf } from "../../Datas";
 import CategoryBar from '../../Components/CategoryBar/CategoryBar';
 import Cart from "../Cart/Cart"
-import BannerCarousal from '../../Components/BannerCarousal/BannerCarousal';
+import BannerCarousel from '../../Components/BannerCarousal/BannerCarousel';
+import ProductCarousel from '../../Components/ProductCarousal/ProductCarousel';
 
 const Home = () => {
   return (
@@ -21,7 +22,37 @@ const Home = () => {
       </div>
       <div className="home-container">
         <div className="home-carousal">
-          <BannerCarousal data={CarouselData} />
+          <BannerCarousel data={CarouselData} />
+        </div>
+        <div className="product-carousal">
+          <ProductCarousel
+            BgImg={
+              "https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90"
+            }
+            Title={"Best of Electronics"}
+            Data={BestOf.Electronics}
+          />
+          <ProductCarousel
+            BgImg={
+              "https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90"
+            }
+            Title={"Beauty,Food,Toys"}
+            Data={BestOf.Electronics}
+          />
+          <ProductCarousel
+            BgImg={
+              "https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90"
+            }
+            Title={"Winter Essentials"}
+            Data={BestOf.Electronics}
+          />
+          <ProductCarousel
+            BgImg={
+              "https://rukminim1.flixcart.com/fk-p-flap/278/278/image/7593e7b6640822c1.jpg?q=90"
+            }
+            Title={"Wedding & Gifting Specials"}
+            Data={BestOf.Electronics}
+          />
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import React from 'react'
-import "./BannerCarousal.css"
+import "./BannerCarousel.css"
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const BannerCarousal = ({data}) => {
+const BannerCarousel = ({data}) => {
     const settings={
         dots:false,
         infinity:true,
@@ -16,8 +16,6 @@ const BannerCarousal = ({data}) => {
     }
   return (
     <div className='banner-carousal'>
-      {console.log("XXXX",data)
-      }
       <Slider {...settings}>
         {data.map((item)=>(
           <div key={item.id}>
@@ -29,4 +27,4 @@ const BannerCarousal = ({data}) => {
   )
 }
 
-export default BannerCarousal
+export default BannerCarousel
