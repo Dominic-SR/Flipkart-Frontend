@@ -5,6 +5,25 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CategoryBanner from '../CategoryBanner/CategoryBanner';
+import { MdOutlineArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
+
+const Next = (props) =>{
+    const {className, onClick} = props;
+    return(
+        <div className={className} onClick={onClick}>
+            <MdOutlineArrowBackIosNew style={{color:"black", fontSize:25, fontWeight:900}} />
+        </div>
+    )
+}
+
+const Prev = (props) =>{
+    const {className, onClick} = props;
+    return(
+        <div className={className} onClick={onClick}>
+            <MdArrowForwardIos style={{color:"black", fontSize:25, fontWeight:900}} />
+        </div>
+    )
+}
 
 const ProductCarousel = ({BgImg,Title,Data}) => {
     const settings={
@@ -14,17 +33,17 @@ const ProductCarousel = ({BgImg,Title,Data}) => {
         Infinity:false,
     }
 return (
-    <div className='category-carousal'>
+    <div className='categoryCarousel'>
         <div 
-        className="categorycarousal-left"
+        className="categoryCarousel-left"
         style={{background: `url(${BgImg}) no-repeat 0px bottom`}}
         >
-            <p className='categorycarousal-title'>{Title}</p>
-            <button className='categorycarousal-btn'>View All</button>
+            <p className='categoryCarousel-title'>{Title}</p>
+            <button className='categoryCarousel-btn'>View All</button>
         </div>
 
-        <div className="categorycarousal-right">
-            <Slider {...settings}>
+        <div className="categoryCarousel-right">
+            <Slider nextArrow={<Next />} prevArrow={<Prev />} {...settings}>
                 {Data.map((item,index)=>(
                     <Link key={index} to={"/products"}>
                         <CategoryBanner

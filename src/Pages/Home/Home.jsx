@@ -8,9 +8,9 @@ import ProductCarousel from '../../Components/ProductCarousal/ProductCarousel';
 
 const Home = () => {
   return (
-    <div className='Home'>
-      <div className="Home-CategoryContainer">
-        <div className="Home-CategoryBar">
+    <div className='home'>
+      <div className="home-categorycontainer">
+        <div className="home-categorybar">
         {CategoryBarData.map((item,index)=>(
           <CategoryBar
             key={index} // Always need a key when mapping!

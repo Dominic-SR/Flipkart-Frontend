@@ -1,0 +1,7 @@
+.products{
+    padding: 80px 10px 10px 20px;
+    width: 100%;
+    height: 100vh;
+    background: rgb(247, 246, 246);
+    display: flex;
+}
