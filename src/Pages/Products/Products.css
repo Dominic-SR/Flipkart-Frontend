@@ -1,12 +1,13 @@
 .products{
     padding: 80px 10px 10px 20px;
     width: 100%;
+    height: 100vh;
     background: rgb(247, 246, 246);
     display: flex;
 }
 
 .products-filters{
-    display: none;
+    /* display: none; */
     width: 20%;
     height: 100%;
     padding: 10px;
@@ -26,3 +27,84 @@
     text-transform: uppercase;
     font-weight: 500;
 }
+
+.filter-category{
+    padding: 10px 20px 0px;
+    font-size: 15px;
+}
+
+.category{
+    padding: 15px 0px;
+    border-bottom: 1px solid rgb(228, 224, 224);
+}
+
+.price{
+     padding: 15px 0px;
+    border-bottom: 1px solid rgb(228, 224, 224);
+}
+
+.pricehead{
+    text-transform: uppercase;
+}
+
+.pricerange{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.price-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-input p{
+    font-size: 15px;
+    color: grey;
+}
+
+.pricebox{
+    width: 100px;
+    padding: 5px;
+}
+
+.brand{
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(207, 206, 205);
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.products-items{
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 15px;
+}
+
+.total-results{
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.sortby{
+    padding: 15px 0px;
+    display: flex;
+}
+
+.sortby > p{
+    font-size: 15px;
+}
+
+.sortitems{
+    display: flex;
+    padding-left: 20px;
+}
+
+.sortitem{
+    list-style: none;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+} 

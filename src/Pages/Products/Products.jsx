@@ -46,13 +46,12 @@ const Products = () => {
               </ul>
             </div>
           </div>
-          <div>
+         
             {ProductsData.map((item,index)=>(
               <Link key={index} to={`/productdetails/${item.id}`}>
                 <ProductDetailsCard Data={item} />
               </Link>
             ))}
-          </div>
           </div>
 
     </div>
